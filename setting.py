@@ -19,12 +19,14 @@ ps.第一步可以不用，改为F12直接查看id。
 
 user_id:str = "2021150047"
 
-cookie = "_WEU=s4IbdHDx4gkf1uFfYfBisEe00pn1rsgBkzAhrkI3aGvZQENiRxypd17y9h1Fnbse; JSESSIONID=423C027BF49FE22DFBA7525260389542; insert_cookie=21666234; b-user-id=c571adeb-8c51-f97f-3375-58c09fcab4df"
+#每次重新登录后会改变
+cookie = ("_WEU=4leCYT5mDN4MY7m20nmrfHfL0s9GMgd3cPxGl*p7NvRxEg17dyQ4YJSNCHZXdVAN; JSESSIONID=CEFADE94D8D6362A526A233B3ECD9D8B; "
+          "insert_cookie=21666234; b-user-id=c571adeb-8c51-f97f-3375-58c09fcab4df")
 
 electiveBatchCode = "04a79c9569de4ac09f6826f6324a644a"
 
 #每次重新登录后会改变
-token = "5fdafd80-a164-40de-b425-5cd4a0b64f63"
+token = "d15efd39-55f0-4aaf-bd12-6102938dd9f4"
 
 # 本班课程： 'TJKC'
 # 方案内课程: 'FANKC'
