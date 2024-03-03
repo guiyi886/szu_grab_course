@@ -18,7 +18,7 @@ if __name__ == "__main__":
                 time.sleep(setting.delay/1000.0)
                 
                 if "该课程超过课容量" in response:
-                    print("该课程超过课容量")
+                    print(course['name']+": 该课程超过课容量")
                     break
                 elif "添加选课志愿成功" in response:
                     print("抢课成功")

@@ -20,13 +20,13 @@ ps.第一步可以不用，改为F12直接查看id。
 user_id:str = "2021150047"
 
 #每次重新登录后会改变
-cookie = ("_WEU=4leCYT5mDN4MY7m20nmrfHfL0s9GMgd3cPxGl*p7NvRxEg17dyQ4YJSNCHZXdVAN; JSESSIONID=CEFADE94D8D6362A526A233B3ECD9D8B; "
+cookie = ("_WEU=0OXsc5E3UJfzsh1WupHzbW1FEiYZv6KS9QY9ceEaeMUll5eu*mI1DuoaAg8w89H9; JSESSIONID=B54CC0528DE66A9AC448A73A60584A45; "
           "insert_cookie=21666234; b-user-id=c571adeb-8c51-f97f-3375-58c09fcab4df")
 
 electiveBatchCode = "04a79c9569de4ac09f6826f6324a644a"
 
 #每次重新登录后会改变
-token = "d15efd39-55f0-4aaf-bd12-6102938dd9f4"
+token = "0f93c96d-0e8a-494c-8655-4cd28afd8040"
 
 # 本班课程： 'TJKC'
 # 方案内课程: 'FANKC'
@@ -40,10 +40,9 @@ courses =[
     #id的意思是2023-2024学期+课程编号+课序号， 课程类别，       课程名字(老师名字)   【注意是英文括号】
     {'id':'202320242150285000103','type':'FANKC','name':"互联网编程(毛斐巧)"},
     {'id':'202320242150294000101','type':'FANKC','name':"信息检索(潘微科)"},
-    {'id':'202320242150297000101','type':'FANKC','name':"面向对象高级编程专题(徐鹏飞)"},
     {'id':'202320242150199003801','type':'FANKC','name':"数据库内核原理与实现(JIANBIN QIN)"}
 ]
-
+# 抢课的顺序是从上到下，若上面的课程没抢到就不会往下抢，想改成循环的话可以重构一下main.py
 
 # 延迟的单位是ms
 delay:int = 800
