@@ -19,7 +19,7 @@ if __name__ == "__main__":
                 
                 if "该课程超过课容量" in response:
                     print(course['name']+": 该课程超过课容量")
-                    break
+                    # break
                 elif "添加选课志愿成功" in response:
                     print("抢课成功")
                     break
