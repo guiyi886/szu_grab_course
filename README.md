@@ -44,30 +44,25 @@ wheel      0.33.1
 
 ## 配置并运行抢课程序
 
-1. 先在网页上登录，然后F12打开控制台，点击网络（network），快捷键ctrl+r开始录制。
-
-   
-
-
-2. 点击一下方案内课程再点击本班课程，会看到出现一个recommendedCourse.do，点击后在标头的请求标头中可以看到Cookie和Token。（每次重新登录后会变）
+1. 先在网页上登录，然后F12打开控制台，点击网络（network）。点击一下方案内课程，再点击本班课程，会看到出现一个recommendedCourse.do，点击后在标头的请求标头中可以看到Cookie和Token。（每次重新登录后会变）
 
    ![示意图](./pic/示意图1.png)
 
 
 
-3. 点击载荷可以看到studentCode和electiveBatchCode。
+2. 点击载荷可以看到studentCode和electiveBatchCode。
 
    ![示意图](./pic/示意图2.png)
 
 
 
-4. 复制到setting.py文件的配置部分。
+3. 复制到setting.py文件的配置部分。
 
    ![示意图](./pic/示意图3.png)
 
 
 
-5. courses部分的信息获取有两种方法：
+4. courses部分的信息获取有两种方法：
 	（1）运行download_data.py下载课程信息到data文件夹，下载完课程相关数据后，就可以在`data`文件夹下查看相关课程信息，根据这些信息来配置`setting.py`文件中的course部分。
 	![示意图](./pic/示意图4.png)
 
@@ -78,6 +73,6 @@ wheel      0.33.1
 
 
 
-6. 配置完`setting.py`后，运行main.py即可开始抢课。出现如下提示说明已抢到课程。
+5. 配置完`setting.py`后，运行main.py即可开始抢课。出现如下提示说明已抢到课程。
    ![示意图](./pic/示意图6.png)
 
