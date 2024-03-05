@@ -1,6 +1,19 @@
-# YourLesson
+# szu_grab_course
 
-YourLesson是针对深圳大学的选课系统进行抢课的，这里只需要几分钟的配置即可使用。
+szu_grab_course是基于python的深圳大学抢课脚本，下载后简单配置即可使用。
+
+复刻于https://github.com/Lewin671/YourLesson 后进行维护和更新。
+
+
+
+## 联系方式
+
+微信号：guiyiac
+
+邮箱：1677852098@qq.com
+
+个人博客：https://blog.csdn.net/qq1677852098
+
 
 
 
@@ -10,17 +23,7 @@ YourLesson是针对深圳大学的选课系统进行抢课的，这里只需要�
 
 
 
-## 设置帐号和密码等参数
-在`setting.py`文件，里面设置好你的参数。参数的含义如下：
-* user_id: 学号
-* electiveBatchCode：　登陆后找到recommendedCourse.do的header，复制electiveBatchCode
-* Cookie: 登陆后找到recommendedCourse.do的header，赋值Cookie到此处。
-* token: 登陆后找到recommendedCourse.do的header，复制token到此处。
-* delay: 抢课的间隔，单位是毫秒。建议不要低于200ms，不然可能会把服务器搞跨，会出事的。
-* count: 抢课的次数。
-* 
-
-## Python环境配置
+## Python环境
 相关pthon库如下
 ```
 Package    Version   
@@ -39,50 +42,42 @@ wheel      0.33.1
 
 
 
-## 运行抢课程序
-1. 下载课程信息到data文件夹，以便后面的操作。
-   `python download_data.py`
-   下载完课程相关数据后，您就可以在`data`文件夹下查看相关课程信息。并且需要根据这些信息来配置`setting.py`文件。
-2. 先自己在网页上提前登录，然后配置setting.py文件。相关字段的查找如下图所示（谷歌浏览器）:
-   ![示意图](./pic/示意图.png)
-   其中courses的格式如下:
-    ```python
-    # 注： 
-    # 本班课程： 'TJKC'
-    # 方案内课程: 'FANKC'
-    # 方案外课程： 'FAWKC'
-    # 校公选课： 'XGXK'
-    # 慕课: "ＭOOC"，
-    # 辅修课程: "FXKC"，
-    # 体育课程:"TYKC"
-    courses =[
-        {'id':'201920201190114000103','type':'FXKC','name':"解析几何(徐希)"},
-        {'id':'201920201990008000101','type':'MOOC','name':"拓展英语词汇"},
-        {'id':'201920201990039000101','type':'MOOC','name':"走进性科学"},
-    ]
-    ```
-3. 配置完`setting.py`后，只需要在当前目录下运行`python3 main.py`就可以开始抢课了。
+## 配置并运行抢课程序
+
+1. 先在网页上登录，然后F12打开控制台，点击网络（network），快捷键ctrl+r开始录制。
+
+   
+
+
+2. 点击一下方案内课程再点击本班课程，会看到出现一个recommendedCourse.do，点击后在标头的请求标头中可以看到Cookie和Token。（每次重新登录后会变）
+
+   ![示意图](./pic/示意图1.png)
 
 
 
-## 常见问题
-**该程序需要提前在网页上登录**，复制网页上的信息设置好setting.py文件后下载课程数据(download_data.py)，然后设置`setting.py`里面courses变量的信息，提前设置程序改选择哪些课程。
+3. 点击载荷可以看到studentCode和electiveBatchCode。
 
-设置完毕后，运行`main.py`程序。
-
-不要忘记设置学号(user_id)！！！
+   ![示意图](./pic/示意图2.png)
 
 
 
-## 抢课成功的界面
+4. 复制到setting.py文件的配置部分。
 
-如果在终端中提示你抢课成功，那么恭喜你，你抢到了这门课。结果如下：
-![](pic/pic2.png)
-
+   ![示意图](./pic/示意图3.png)
 
 
-## 个人附加批注
 
-流程：1.运行download_data.py拉取最新课程信息。2.查看信息按照格式填写setting.py。3.运行main.py进行抢课。
+5. courses部分的信息获取有两种方法：
+	（1）运行download_data.py下载课程信息到data文件夹，下载完课程相关数据后，就可以在`data`文件夹下查看相关课程信息，根据这些信息来配置`setting.py`文件中的course部分。
+	![示意图](./pic/示意图4.png)
 
-ps.第一步可以不用，改为F12直接查看id。
+   
+
+	（2）直接F12，ctrl+shirt+c后点击要选的课，在源代码中查看课程id。
+	![示意图](./pic/示意图5.png)
+
+
+
+6. 配置完`setting.py`后，运行main.py即可开始抢课。出现如下提示说明已抢到课程。
+   ![示意图](./pic/示意图6.png)
+
