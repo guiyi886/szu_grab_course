@@ -89,7 +89,7 @@ def save_to_file(type,methods):
 
         path = os.path.abspath("data/"+type+('.csv'))
         #print(path)
-        file = open(path,mode="a+")
+        file = open(path,mode="a+",encoding="utf-8")    #确保文件以 utf-8 编码进行读写，从而能够正确处理包含非 ASCII 字符的文本内容。
         for course in data['dataList']:
             for j in range(1000):
                 if len(course['tcList']) <= j:

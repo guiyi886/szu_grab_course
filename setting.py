@@ -20,13 +20,13 @@ ps.第一步可以不用，改为F12直接查看id。
 user_id:str = "2021150047"
 
 #每次重新登录后会改变
-cookie = ("_WEU=AA*RB4889CMconJSDWOThnErNTafI10cc0kwSFsbvFN*LAJKy6w6kjMc0O5F2RXy; JSESSIONID=98B82090FC8E4BCEF417EB02A206D46D;"
-          " b-user-id=c571adeb-8c51-f97f-3375-58c09fcab4df; insert_cookie=26684640")
+cookie = ("_WEU=rfhjF4PaYINuCCd_kqfaHvohaBAqdm4TgJ6RtIMKpLduDy1Ef2pMdvxDBRgFba2r; JSESSIONID=2CD85D58A90AA87245C9051B1E7976B5; "
+          "b-user-id=c571adeb-8c51-f97f-3375-58c09fcab4df; insert_cookie=33374701")
 
 electiveBatchCode = "04a79c9569de4ac09f6826f6324a644a"
 
 #每次重新登录后会改变
-token = "13d4be71-a3b4-46fa-a22d-c6c7cacb77d7"
+token = "6e912f8e-a3b4-4ef5-8a0b-ca8358420b1c"
 
 # 本班课程： 'TJKC'
 # 方案内课程: 'FANKC'
@@ -43,7 +43,8 @@ courses =[
     # {'id':'202320242150199003801','type':'FANKC','name':"数据库内核原理与实现(JIANBIN QIN)"}
     # {'id':'202320242150328000102','type':'FANKC','name':"网络安全(林秋镇)"},
     # {'id':'202320242150199001301','type':'FANKC','name':"数据挖掘(陈小军)"},
-    {'id':'202320242150297000101','type':'FANKC','name':"面向对象高级编程专题(徐鹏飞)"}
+    # {'id':'202320242150297000101','type':'FANKC','name':"面向对象高级编程专题(徐鹏飞)"},
+    # {'id':'202320242190064000132','type':'FANKC','name':"高等数学A（2）(李莉)"},
 ]
 # 抢课的顺序是从上到下，若上面的课程没抢到就不会往下抢，想改成循环的话可以重构一下main.py（更新：已重构完成  归忆）
 
